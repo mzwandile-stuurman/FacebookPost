@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6VOCsaD95/eK/7zEH0wnj3ADdY3FvWIv0ssERGYPWzx6Mx2H0H4nAwVas7gaIZhHhTDAGTskjavOFQ6R9gMf9g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Mzwandile\\source\\repos\\FacebookPost\\FacebookPost\\FacebookPost.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Mzwandile\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
