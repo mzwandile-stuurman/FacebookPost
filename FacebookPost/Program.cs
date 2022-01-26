@@ -9,14 +9,46 @@ namespace FacebookPost
     {
         static void Main(string[] args)
         {
-            Facebook facebook = new Facebook("EAAMfvTfUa48BAB6KBjbsUHIZCvNnmaDBAG8fPTLUJ0ttHv0Id065A2ZAM6NyfFVnyEQDQu4fSEK3WoE2pbFXANUZCgV7psC8GFVkmZCJnEdbBXhmncmSC7WZCJBN9AywBNTnznXHpB0ND4plxZACPQiB5qqgfYKUwzMXEnAZAPtZCie4tjEOXZAATTq2kdPqBmh4gNf3PprxHTwZDZD", "104587057971075");
+            Facebook facebook = new Facebook("EAAMfvTfUa48BAMVi3mkBdUT9NIdYO0XAGDx4uVfMPdZAI4AHD1fF6eItQgiJwYY2AtZAdY7itufNAEgbybItupCx0X948MqAGAKL6LFxaA4QjuuQRQZARlZBYivA1siRZCn3BnPndxZBZCxCq4ZC4fDa7nCVYRXJayf6OjZCuKou3kBlZCILDPYzqJ", "104587057971075");
+            Job Jobs = new Job();
+            Jobs.Title = "Office Admin Assistant";
+            Jobs.Description = $@"We are looking for a reliable Office Administrator. They will undertake administrative tasks, ensuring the rest of the staff has adequate support to work efficiently.
 
+ 
+
+The tasks of the office administrator will include bookkeeping and mentoring office assistants. The ideal candidate will be competent in prioritizing and working with little supervision. They will be self-motivated and trustworthy.
+
+ 
+
+The office administrator ensures smooth running of our company’s offices and contributes in driving sustainable growth.
+
+Responsibilities
+
+- Coordinate office activities and operations to secure efficiency and compliance to company policies
+
+- Supervise administrative staff and divide responsibilities to ensure performance
+
+- Manage agendas/travel arrangements/appointments etc. for the upper management
+
+- Manage phone calls and correspondence (e-mail, letters, packages etc.)
+
+- Support budgeting and bookkeeping procedures
+
+- Create and update records and databases with personnel, financial and other data
+
+- Track stocks of office supplies and place orders when necessary
+
+- Submit timely reports and prepare presentations/proposals as assigned
+
+- Assist colleagues whenever necessary";
+            Jobs.Location = "JHB Central";
+            Jobs.Company = "VSCO Ltd";
             var rezText = Task.Run(async () =>
              {
 
                  using (var http = new HttpClient())
                  {
-                     return await facebook.PublishSimplePost("Good day everyone. How may we be of service?");
+                     return await facebook.PublishSimplePost(Jobs.ToString());
                  }
              });
              var rezTextJson = JObject.Parse(rezText.Result.Item2);
